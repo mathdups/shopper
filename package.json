@@ -1,5 +1,17 @@
 {
   "name": "shopper",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ujs": "^1.2.2",
+    "rails-ujs": "^5.2.1",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.25.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "2.11.2"
+  }
 }
