@@ -10,11 +10,13 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
+          <%= link_to "Mon panier", order_items_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
           <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
@@ -38,6 +40,8 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Mon panier", order_items_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
     <% end %>
   </div>
 

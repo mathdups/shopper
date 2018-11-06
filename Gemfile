@@ -33,6 +33,9 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'webpacker'
 gem 'autoprefixer-rails'
+gem 'pundit'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -48,10 +51,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', groups: [:development, :test]
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'jquery-rails'
+
 end
 
 group :development do
@@ -67,3 +71,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "rails-ujs", "~> 0.1.0"
+
