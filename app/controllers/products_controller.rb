@@ -5,4 +5,9 @@ class ProductsController < ApplicationController
     @products = @category.products.includes(:variants).order(:title)
   end
 
+  def show 
+   @product = Product.find(params[:id])
+   
+  end
+
 end
