@@ -51,6 +51,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'jquery-rails'
 end
 
 group :development do
